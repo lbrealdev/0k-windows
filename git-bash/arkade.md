@@ -35,7 +35,7 @@ Copy the executable to `bin` in your home directory:
 cp arkade.exe $HOME/bin/
 ```
 
-Check `arkade` versio:
+Check `arkade` version:
 ```shell
-arkade --version
+arkade version
 ```
