@@ -39,3 +39,8 @@ Check `arkade` version:
 ```shell
 arkade version
 ```
+
+Add arkade `bin` directory to your PATH: 
+```shell
+echo "export PATH=$PATH:$HOME/.arkade/bin/" >> ~/.bashrc
+```
