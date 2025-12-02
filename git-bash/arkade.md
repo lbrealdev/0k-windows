@@ -22,8 +22,9 @@ After create `$HOME/bin` directory, create a new directory called `apps` in your
 mkdir $HOME/apps && cd $HOME/apps
 ```
 
-**NOTE**: The `apps` directory is optional, as it is only used to store application that have been downloaded. You can also use the `/tmp` directory to
-store downloads.
+> [!NOTE]
+> The `~/apps` directory is optional, as it is only used to store application that have been downloaded. You can also use the `/tmp` directory to
+> store downloads.
 
 Download the `arkade` executable from GitHub release page:
 ```shell
