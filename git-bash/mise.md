@@ -51,7 +51,23 @@ jq
 mise use -g jq
 ```
 
-awscli
+Install `awscli`:
 ```shell
 uv tool install awscli
 ```
+
+Uninstall `awscli`:
+```shell
+uv tool uninstall awscli
+```
+
+> [NOTE]
+> This method will install AWS CLI version 1.
+
+To install AWS CLI v2, follow the following steps.
+
+Install AWS CLI v2 from GitHub repository v2 branch:
+```shell
+uv tool install git+https://github.com/aws/aws-cli@v2
+```
+
