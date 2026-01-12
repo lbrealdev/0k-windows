@@ -51,7 +51,7 @@ echo "export PATH='$PATH:$HOME/.arkade/bin/'" >> ~/.bashrc
 sed -i d ~/.bashrc
 ```
 
-Delete `arkade.exe` from bin directory:
+Delete `arkade.exe` and binary directory:
 ```shell
-rm -rf ~/bin/arkade.exe
+rm -rf ~/bin/arkade.exe ~/.arkade
 ```

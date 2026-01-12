@@ -19,5 +19,15 @@ cp mise/bin/mise.exe ~/bin
 
 Lasty, add mise activate to the `.bashrc` file:
 ```shell
-echo 'eval "$(mise activate bash)"' >> ~/.bashrc
+echo "export PATH='$PATH:/c/Users/$USERNAME/AppData/Local/mise/shims'" >> ~/.bashrc
 ```
+
+```shell
+mise doctor
+```
+
+Check if everything was well:
+```shell
+mise version
+```
+
