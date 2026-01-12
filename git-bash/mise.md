@@ -61,7 +61,7 @@ Uninstall `awscli`:
 uv tool uninstall awscli
 ```
 
-> [NOTE]
+> [!NOTE]
 > This method will install AWS CLI version 1.
 
 To install AWS CLI v2, follow the following steps.
