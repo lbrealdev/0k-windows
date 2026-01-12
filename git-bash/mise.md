@@ -12,3 +12,12 @@ Extract the zip file:
 unzip -q mise_windows.zip
 ```
 
+Copy the executable from mise directory to `~/bin`:
+```shell
+cp mise/bin/mise.exe ~/bin
+```
+
+Lasty, add mise activate to the `.bashrc` file:
+```shell
+echo 'eval "$(mise activate bash)"' >> ~/.bashrc
+```
