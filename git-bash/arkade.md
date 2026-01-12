@@ -2,14 +2,14 @@
 
 ## Install Arkade on Git Bash
 
-First of all, check if the following path `/c/Users/<user>/bin` is defined in the PATH environment variable:
+First of all, check if the following path `/c/Users/<user>/bin` is defined in the `PATH` environment variable:
 ```shell
 printenv PATH | tr ':' '\n'
 ```
 
-If it is defined, check if the `$HOME/bin` directory exists:
+If the `PATH` has a variable like this `$HOME/bin` defined, check if the bin directory exists:
 ```shell
-ls -la $HOME | grep bin
+find $HOME -type d 2>&1 | grep "$HOME/bin"
 ```
 
 If the `$HOME/bin` directory doesn't exist, create it in your home directory:
@@ -23,8 +23,7 @@ mkdir $HOME/apps && cd $HOME/apps
 ```
 
 > [!NOTE]
-> The `~/apps` directory is optional, as it is only used to store application that have been downloaded. You can also use the `/tmp` directory to
-> store downloads.
+> The `~/apps` directory is optional, as it is only used to store application that have been downloaded. You can also use the `/tmp` directory to store downloads.
 
 Download the `arkade` executable from GitHub release page:
 ```shell
@@ -43,5 +42,5 @@ arkade version
 
 Add arkade `bin` directory to your PATH: 
 ```shell
-echo "export PATH=$PATH:$HOME/.arkade/bin/" >> ~/.bashrc
+echo "export PATH='$PATH:$HOME/.arkade/bin/'" >> ~/.bashrc
 ```
