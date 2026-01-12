@@ -44,3 +44,14 @@ Add arkade `bin` directory to your PATH:
 ```shell
 echo "export PATH='$PATH:$HOME/.arkade/bin/'" >> ~/.bashrc
 ```
+
+## Uninstall
+
+```shell
+sed -i d ~/.bashrc
+```
+
+Delete `arkade.exe` from bin directory:
+```shell
+rm -rf ~/bin/arkade.exe
+```
