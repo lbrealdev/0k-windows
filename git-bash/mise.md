@@ -23,6 +23,10 @@ echo "export PATH='$PATH:/c/Users/$USERNAME/AppData/Local/mise/shims'" >> ~/.bas
 ```
 
 ```shell
+source ~/.bashrc
+```
+
+```shell
 mise doctor
 ```
 
@@ -31,3 +35,23 @@ Check if everything was well:
 mise version
 ```
 
+## Setup Tools
+
+uv
+```shell
+mise use -g uv
+
+# Add to the PATH
+
+echo "export PATH='$PATH:$HOME/.local/bin'" >> ~/.bashrc
+```
+
+jq
+```shell
+mise use -g jq
+```
+
+awscli
+```shell
+uv tool install awscli
+```
