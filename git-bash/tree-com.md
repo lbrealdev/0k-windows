@@ -1,6 +1,6 @@
 # tree.com
 
-It's a fucking version of `tree` or something like that.
+Alternative version of the `tree` command for Linux available in Git Bash.
 
 ## Usage
 
