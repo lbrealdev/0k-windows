@@ -2,7 +2,7 @@
 
 ## Install mise on Git Bash
 
-Download the mise executable form GitHub release page:
+Download the [mise](https://github.com/jdx/mise) executable form GitHub release page:
 ```shell
 curl -fsSLo "mise_windows.zip" "https://github.com/jdx/mise/releases/download/v2026.1.1/mise-v2026.1.1-windows-x64.zip"
 ```
@@ -32,11 +32,11 @@ Check if everything is correct:
 mise doctor
 ```
 
-## Setup Tools
+## Installing tools with mise
 
 ### uv
 
-Run the following command to install [uv](https://github.com/astral-sh/uv):
+Install [uv](https://github.com/astral-sh/uv):
 ```shell
 mise use -g uv
 ```
