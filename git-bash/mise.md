@@ -2,7 +2,7 @@
 
 ## Install mise on Git Bash
 
-Download the [mise](https://github.com/jdx/mise) executable form GitHub release page:
+Download the [mise](https://github.com/jdx/mise) executable from the GitHub releases page:
 ```shell
 curl -fsSLo "mise_windows.zip" "https://github.com/jdx/mise/releases/download/v2026.1.1/mise-v2026.1.1-windows-x64.zip"
 ```
