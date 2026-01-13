@@ -32,7 +32,7 @@ Check if everything is correct:
 mise doctor
 ```
 
-## Installing tools with mise
+## Installing tools
 
 ### uv
 
