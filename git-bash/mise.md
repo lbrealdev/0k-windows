@@ -12,12 +12,12 @@ Extract the zip file:
 unzip -q mise_windows.zip
 ```
 
-Copy the executable from mise directory to `~/bin`:
+Copy the mise executable to `~/bin` directory:
 ```shell
 cp mise/bin/mise.exe ~/bin
 ```
 
-Lasty, add mise activate to the `.bashrc` file:
+Finally, add mise activate to PATH:
 ```shell
 echo "export PATH='$PATH:/c/Users/$USERNAME/AppData/Local/mise/shims'" >> ~/.bashrc
 ```
@@ -26,13 +26,9 @@ echo "export PATH='$PATH:/c/Users/$USERNAME/AppData/Local/mise/shims'" >> ~/.bas
 source ~/.bashrc
 ```
 
+Check if everything is correct:
 ```shell
 mise doctor
-```
-
-Check if everything was well:
-```shell
-mise version
 ```
 
 ## Setup Tools
@@ -56,13 +52,12 @@ Install jq:
 mise use -g jq
 ```
 
-### AWS CLI
+### aws-cli
 
-If you have `uv` installed, you can easily setup the AWS CLI `v2`, running the following command. This will install the package directly from the v2 branch of the aws-cli repository:
+If you have `uv` installed, you can easily set up AWS CLI `v2` by running the following command. This will install the package directly from the v2 branch of the [aws-cli](https://github.com/aws/aws-cli/tree/v2) repository:
 ```shell
 uv tool install git+https://github.com/aws/aws-cli@v2 -p 3.13
 ```
 
 > [!NOTE]
-> If you execute `uv tool install awscli` you're installing the AWS CLI v1, it works, but is not recommended.
-> This installation method takes a few minutes because of dependency resolution.
+> If you run `uv tool install awscli`, you'll be installing AWS CLI v1. It works correctly, but it's not recommended.

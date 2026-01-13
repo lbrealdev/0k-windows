@@ -1,3 +1,4 @@
 # Git Bash (Git For Windows)
 
-// to do
+- [Mise](mise.md)
+- [Tree.com](tree-com.md)
