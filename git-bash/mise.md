@@ -37,37 +37,32 @@ mise version
 
 ## Setup Tools
 
-uv
+### uv
+
+Run the following command to install `uv`:
 ```shell
 mise use -g uv
+```
 
-# Add to the PATH
-
+Once installed, add the following entry to the PATH:
+```shell
 echo "export PATH='$PATH:$HOME/.local/bin'" >> ~/.bashrc
 ```
 
-jq
+### jq
+
+Install jq:
 ```shell
 mise use -g jq
 ```
 
-Install `awscli`:
-```shell
-uv tool install awscli
-```
+### AWS CLI
 
-Uninstall `awscli`:
+If you have `uv` installed, you can easily setup the AWS CLI `v2`, running the following command. This will install the package directly from the v2 branch of the aws-cli repository:
 ```shell
-uv tool uninstall awscli
+uv tool install git+https://github.com/aws/aws-cli@v2 -p 3.13
 ```
 
 > [!NOTE]
-> This method will install AWS CLI version 1.
-
-To install AWS CLI v2, follow the following steps.
-
-Install AWS CLI v2 from GitHub repository v2 branch:
-```shell
-uv tool install git+https://github.com/aws/aws-cli@v2
-```
-
+> If you execute `uv tool install awscli` you're installing the AWS CLI v1, it works, but is not recommended.
+> This installation method takes a few minutes because of dependency resolution.
