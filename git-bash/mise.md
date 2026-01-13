@@ -22,6 +22,7 @@ Finally, add mise activate to PATH:
 echo "export PATH='$PATH:/c/Users/$USERNAME/AppData/Local/mise/shims'" >> ~/.bashrc
 ```
 
+Load variables:
 ```shell
 source ~/.bashrc
 ```
@@ -35,7 +36,7 @@ mise doctor
 
 ### uv
 
-Run the following command to install `uv`:
+Run the following command to install [uv](https://github.com/astral-sh/uv):
 ```shell
 mise use -g uv
 ```
@@ -47,14 +48,14 @@ echo "export PATH='$PATH:$HOME/.local/bin'" >> ~/.bashrc
 
 ### jq
 
-Install jq:
+Install [jq](https://github.com/jqlang/jq):
 ```shell
 mise use -g jq
 ```
 
 ### aws-cli
 
-If you have `uv` installed, you can easily set up AWS CLI `v2` by running the following command. This will install the package directly from the v2 branch of the [aws-cli](https://github.com/aws/aws-cli/tree/v2) repository:
+If you have `uv` installed, you can easily set up `AWS CLI v2` by running the following command. This will install the package directly from the v2 branch of the [aws-cli](https://github.com/aws/aws-cli/tree/v2) repository:
 ```shell
 uv tool install git+https://github.com/aws/aws-cli@v2 -p 3.13
 ```
