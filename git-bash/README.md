@@ -1,4 +1,18 @@
 # Git Bash (Git For Windows)
 
-- [Mise](mise.md)
-- [Tree.com](tree-com.md)
+- [mise](tools/mise.md)
+- [tree.com](tools/tree-com.md)
+
+## Python Alias
+
+```shell
+echo "alias python3='uv run'" > ~/.bash_aliases
+```
+
+```shell
+source ~/.bash_aliases
+```
+
+```shell
+alias
+```
