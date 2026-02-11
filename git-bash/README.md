@@ -3,16 +3,16 @@
 - [mise](tools/mise.md)
 - [tree.com](tools/tree-com.md)
 
-## Python Alias
+## Alias
 
 ```shell
 echo "alias python3='uv run'" > ~/.bash_aliases
-```
-
-```shell
 source ~/.bash_aliases
+alias
 ```
 
+## Wrapper Script
+
 ```shell
-alias
+printf '#!/bin/bash\nuv run python "$@"\n' > ~/bin/python3 && chmod +x ~/bin/python3
 ```
