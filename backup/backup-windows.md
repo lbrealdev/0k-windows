@@ -15,7 +15,7 @@ Before copying, see how much space each user profile takes so you know what fits
 
 ```powershell
 Get-ChildItem C:\Users -Directory | ForEach-Object {
-    $size = (Get-ChildItem $_.FullName -Recurse -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum).Sum
+    $size = (Get-ChildItem $_.FullName -Recurse -File -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum
     [PSCustomObject]@{User=$_.Name; SizeGB=[math]::Round($size/1GB, 2)}
 } | Format-Table -AutoSize
 ```
