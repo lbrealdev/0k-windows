@@ -48,6 +48,22 @@ What the flags do:
 - `/R:1` — 1 retry on locked files
 - `/W:1` — wait 1 second between retries
 
+### Skip AppData
+
+If you only want personal files (Documents, Pictures, Desktop, Downloads) and don't need program configs, email caches, or game saves:
+
+```cmd
+robocopy C:\Users\YOUR_USERNAME D:\backup\YOUR_USERNAME /E /COPY:DAT /R:1 /W:1 /XD AppData
+```
+
+`/XD AppData` excludes the entire AppData folder. This skips:
+- Browser profiles and bookmarks
+- Local email (Outlook, Thunderbird)
+- Program settings and caches
+- Game saves
+
+The visible folders (Documents, Pictures, Desktop, Downloads, Music, Videos, Favorites) are still copied.
+
 ## Backup all users at once
 
 ```cmd
