@@ -5,8 +5,24 @@ Backup user files from Windows using `robocopy` (built-in, no install needed).
 ## Prerequisites
 
 - **Destination with enough space:** external HDD, USB drive, or network share
-- **Check used space:** right-click `C:\Users\YourUsername` → Properties
-- **Check free space on destination:** same, on the target drive
+- **Check free space on destination:** right-click the drive → Properties
+
+## Check disk usage per user
+
+Before copying, see how much space each user profile takes so you know what fits.
+
+### PowerShell (size per user in GB)
+
+```powershell
+Get-ChildItem C:\Users -Directory | ForEach-Object {
+    $size = (Get-ChildItem $_.FullName -Recurse -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum).Sum
+    [PSCustomObject]@{User=$_.Name; SizeGB=[math]::Round($size/1GB, 2)}
+} | Format-Table -AutoSize
+```
+
+### Quick check (GUI)
+
+Right-click `C:\Users\YourUsername` → Properties. Multiply by number of users for a rough total.
 
 ## Verify robocopy works
 
